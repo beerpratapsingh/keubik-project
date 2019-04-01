@@ -1,0 +1,43 @@
+@import mixing
+@import variable
+
+img
+  max-width: 100%
+
+a
+  text-decoration: none
+
+ul,
+ol
+  list-style: none
+
+%color-shared
+  color: $white
+
+
+h1
+  @extend %color-shared
+  font-size: 60px
+h2
+  @extend %color-shared
+  font-size: 48px
+h3
+  @extend %color-shared
+  font-size: 36px
+h4
+  @extend %color-shared
+  font-size: 24px
+
+.btn
+  display: inline-block
+  padding: 7px 20px 10px
+  @include border-radius(5px)
+
+@media only screen and (max-width: 47.9375em)
+  h1
+    font-size: 48px
+  .page-content
+    z-index: 1
+  .page-icon
+    position: absolute
+    opacity: .5

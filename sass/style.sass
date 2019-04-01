@@ -1,0 +1,87 @@
+@import reset
+@import common
+@import variable
+
+@font-face
+  src: url(../fonts/Archivo-Regular.ttf)
+  font-family: Archivo-Regular
+
+body
+  color: $primary-color
+  font-family: $font-stack
+  font-size: 18px
+  line-height: 1.24  
+
+  %css-shared
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+  .home-bg
+    background: rgba(0,0,0,.9) url(../images/rectangle@2x.png) no-repeat
+    .wrap
+      max-width: 1200px
+      margin: 0 auto      
+      .header      
+        padding: 25px 0
+        .logo
+          max-width: 100px
+          display: inline-block
+          padding: 0
+          a
+            display: inherit   
+        .nav-bar
+          .navbar-list
+            li
+              margin-right: 20px
+          .btn
+            color: $white
+            background: $light-brown  
+          .hamburger-icon
+            cursor: pointer
+            span
+              width: 35px
+              height: 5px
+              display: block
+              background: #818181
+              position: relative
+              transition: all .5s              
+              & + span
+                margin-top: 5px
+          .open
+            margin-top: -10px
+            span
+              &:nth-child(1)
+                top: 10px
+                @include transform(rotate(45deg))
+              &:nth-child(2)                
+                @include transform(rotate(-45deg))
+      
+      .inner-content
+        padding: 50px 0
+        .page-content
+          h1
+            padding-top: 40px
+          p
+            color: $white
+            font-size: 24px
+            padding: 30px 0 50px
+          .btn
+            color: $primary-color
+            background: $white
+            margin-bottom: 20px
+                          
+      .footer
+        padding: 20px 0
+        .social-icons
+          .icons-list
+            display: flex
+            li
+              & + li
+                margin-left: 15px
+              a
+                color: $white
+                font-size: 20px  
+        .footer-txt
+          color: #818181      
+          text-align: right                
